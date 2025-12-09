@@ -7,7 +7,7 @@ export default function Hero() {
         bg-[#94a68c]
         grid grid-cols-1 md:grid-cols-2
         min-h-screen      /* agora ocupa a tela inteira */
-        mt-[72px]         /* compensa o header fixo */
+        mt-[50px]         /* compensa o header fixo */
       "
     >
 
