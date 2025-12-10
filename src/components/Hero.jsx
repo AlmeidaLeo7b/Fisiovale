@@ -47,8 +47,13 @@ export default function Hero() {
           Nossos profissionais não apenas tratam, mas reimaginam o seu bem-estar.
         </p>
 
-        <div> {/* 2. Trocamos <button> por <Link> 3. O 'to' deve ser igual ao 'path' lá no seu arquivo de rotas (App.jsx ou main.jsx) */} <Link to="/AboutMe" className="inline-block bg-white text-[#94a68c] 
-        font-bold py-4 px-10 rounded-full shadow-lg hover:bg-gray-100 transition-transform hover:scale-105" > Saiba mais </Link> </div>
+        <div> {/* 2. Trocamos <button> por <Link> 3. O 'to' deve ser igual ao 'path' lá no seu arquivo de rotas (App.jsx ou main.jsx) */} 
+          <Link to="/AboutMe" className="inline-block bg-white text-[#94a68c] font-bold py-4 px-10 
+            rounded-full shadow-lg hover:bg-gray-100 transition-transform hover:scale-105" > 
+          Saiba mais 
+        </Link> 
+        </div>
+        
       </div>
 
       {/* --- COLUNA DIREITA (IMAGEM) --- */}

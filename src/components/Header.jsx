@@ -39,9 +39,13 @@ export default function Header() {
           </button>
 
           {/* Botão no desktop */}
-          <button className="hidden md:block bg-white text-[#94A68C] px-6 py-2 rounded-full hover:bg-[#F5F5F5] transition-colors shadow-lg">
+          <Link
+            to="/Agendamento"
+            className="hidden md:block bg-white text-[#94A68C] px-6 py-2 rounded-full hover:bg-[#F5F5F5] transition-colors shadow-lg"
+          >
             Agende agora
-          </button>
+          </Link>
+
 
         </div>
       </header>
@@ -86,9 +90,9 @@ export default function Header() {
         <a href="#" className="text-lg">Contato</a>
 
         {/* Botão “Agende agora” */}
-        <button className="bg-white text-[#94A68C] px-6 py-2 rounded-full shadow-md">
+        <Link to="/Agendamento" className="bg-white text-[#94A68C] px-6 py-2 rounded-full shadow-md">
           Agende agora
-        </button>
+        </Link>
       </div>
     </>
   )
