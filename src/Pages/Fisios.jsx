@@ -34,7 +34,7 @@ export default function Especialistas() {
       ordem: "invertida" // Foto Esquerda / Texto Direita
     },
     {
-      nome: "Dra. Camille [...]",
+      nome: "Dra. Camile [...]",
       cargo: "Cargo",
       registro: "CREFITO: xxxxxx-F",
       bio: [
