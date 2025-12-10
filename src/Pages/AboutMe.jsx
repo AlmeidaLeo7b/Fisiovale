@@ -1,48 +1,75 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { useEffect } from 'react';
 
 export default function AboutMe() {
-  
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
-    <div className="min-h-screen bg-[#fafaf9] flex flex-col justify-between">
+    <div className="bg-[#F5F5F5] min-h-screen flex flex-col">
+
+      {/* HEADER FIXO */}
       <Header />
-      
-      {/* --- MAIN CONTENT --- */}
-      <main className="flex-grow flex items-center justify-center px-6 py-20">
+
+      {/* CONTEÚDO PRINCIPAL */}
+      <section className="relative flex-1 pt-32 pb-24 px-4 sm:px-6 md:px-12">
         
-        {/* Container Principal do Grid (máximo de largura 6xl para não ficar gigante) */}
-        <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 items-center">
-          
-          {/* --- COLUNA DA IMAGEM (Ocupa 7 de 12 colunas no PC) --- */}
-          <div className="md:col-span-7 relative z-0 h-[400px] md:h-[600px]">
-            <img 
-              // Substitua este link pela sua imagem
-              src="https://images.unsplash.com/photo-1464822759023-d6268d823038?q=80&w=2070&auto=format&fit=crop" 
-              alt="Paisagem inspiradora" 
-              className="w-full h-full object-cover rounded-2xl shadow-lg"
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center relative">
+
+          {/* =================== CARD BRANCO SOBREPOSTO =================== */}
+          <div
+            className="
+              bg-white 
+              p-6 
+              md:p-8 
+              lg:p-12 
+              text-[#6B8F80] 
+              text-lg 
+              md:text-xl 
+              leading-relaxed 
+              shadow-lg
+              relative 
+              z-10
+              lg:-mr-16
+              order-2 
+              lg:order-1
+              mt-8
+              lg:mt-0
+            "
+          >
+            <p className="text-justify md:text-left">
+              Esta clínica foi criada com o propósito de promover saúde, equilíbrio e qualidade de vida por meio de práticas responsáveis, 
+              movimento consciente e evolução contínua. Aqui, cada pessoa encontra orientação acolhedora, fundamentos técnicos sólidos 
+              e um ambiente preparado para apoiar sua jornada de bem-estar. Acreditamos que essa vontade nasce quando o indivíduo se sente 
+              no lugar certo — um lugar onde cuidado, conhecimento e confiança caminham juntos. Nosso compromisso é oferecer clareza, 
+              segurança e suporte em cada etapa, para que cada avanço seja significativo e sustentável.
+            </p>
+          </div>
+
+          {/* =================== IMAGEM PANORÂMICA =================== */}
+          <div className="relative z-10 order-1 lg:order-2">
+            <img
+              src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2000&auto=format&fit=crop"
+              alt="Paisagem inspiradora"
+              className="
+                w-full 
+                h-[600px]
+                sm:h-[500px]
+                md:h-[600px]
+                lg:h-[650px]
+                xl:h-[700px]
+                object-cover 
+                shadow-lg
+                rounded-lg
+                lg:rounded-none
+              "
+              loading="lazy"
             />
+            
+            {/* Overlay sutil para melhor contraste do texto */}
+            <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent lg:hidden"></div>
           </div>
+        </div>
+      </section>
 
-          {/* --- COLUNA DO TEXTO (Ocupa 5 de 12 colunas no PC) --- */}
-          {/* md:-ml-20: A MÁGICA! Margem negativa puxa a caixa para cima da imagem.
-              z-10: Garante que o texto fique NA FRENTE da imagem.
-              bg-white p-12 shadow-2xl: Estilo da caixa branca flutuante.
-          */}
-          <div className="bg-white p-8 md:p-12 rounded-2xl shadow-2xl md:col-span-5 relative z-10 mt-8 md:mt-0 md:-ml-20">
-            <h2 className="font-libre text-2xl md:text-3xl lg:text-4xl text-[#94a68c] leading-relaxed font-normal text-left">
-              Tudo começa com uma ideia. Talvez você queira abrir um negócio. Talvez você queira transformar um passatempo em algo mais sério. Ou talvez você tenha um projeto criativo para divulgar ao mundo. Seja o que for, o modo de contar sua história on-line faz toda a diferença.
-            </h2>
-          </div>
-
-        </section>
-
-      </main>
-
+      {/* FOOTER */}
       <Footer />
     </div>
   )
