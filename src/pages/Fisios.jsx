@@ -21,15 +21,15 @@ export default function Especialistas() {
       ordem: "normal"
     },
     {
-      nome: "Dra. Patricia Silva",
+      nome: "Dra. Patricia ",
       cargo: "Fisioterapeuta",
-      registro: "CREFITO: 654321-F",
+      registro: "CREFITO: XXXXXX-F",
       bio: ["Especialista em técnicas avançadas de reabilitação."],
       foto: "https://as1.ftcdn.net/jpg/02/67/73/72/1000_F_267737218_0vABBntdJ1tg16Z2db4mZUmeVC1BWrLM.jpg",
       ordem: "invertida"
     },
     {
-      nome: "Dra. Camile Ferreira",
+      nome: "Dra. Camile ",
       cargo: "Instrutora de Pilates",
       registro: "CREFITO: xxxxxx-F",
       bio: ["Foco em equilíbrio, postura e qualidade de vida."],
@@ -37,7 +37,7 @@ export default function Especialistas() {
       ordem: "normal"
     },
     {
-      nome: "Dra. Yde Costa",
+      nome: "Dra. Yde ",
       cargo: "Fisioterapeuta",
       registro: "CREFITO: XXXXXXX-F",
       bio: ["Atendimento humanizado e técnicas modernas de reabilitação."],
