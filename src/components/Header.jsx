@@ -8,24 +8,31 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-20 bg-[#94a68c] flex items-center justify-between px-[2vw] py-4 font-sans">
+      <header className="
+        w-full 
+        bg-[#94a68c]
+        px-[2vw] py-4
+        flex items-center justify-between
+        font-sans
+        relative
+      ">
 
         {/* NAVBAR - ESQUERDA (DESKTOP) */}
-        <nav className="hidden md:flex gap-[2vw] text-white font-medium">
-          {/* Combinamos a rota '/' com o hash '#servicos' */}
-          <Link to="/#servicos" className="hover:text-white transition-colors">Serviços</Link>
-          
-          {/* Se 'Team' for uma seção na home: */}
-          <Link to="/#team" className="hover:text-white transition-colors">Quem somos</Link>
-          
-          {/* Se 'Contato' for uma seção na home: */}
-          <Link to="/#contato" className="hover:text-white transition-colors">Contato</Link>
+        <nav className="hidden md:flex gap-[2vw] text-white font-medium opacity-90">
+          <Link to="/#servicos" className="hover:opacity-100 transition-opacity">Serviços</Link>
+          <Link to="/#team" className="hover:opacity-100 transition-opacity">Quem somos</Link>
+          <Link to="/#contato" className="hover:opacity-100 transition-opacity">Contato</Link>
         </nav>
 
-        {/* TÍTULO — SEMPRE CENTRALIZADO */}
+        {/* TÍTULO — ELEGANTE E SEM FIXAÇÃO */}
         <Link
           to="/"
-          className="text-[2rem] text-white font-libre font-bold tracking-wide leading-none absolute left-1/2 -translate-x-1/2"
+          className="
+            text-[2rem] text-white font-libre font-bold tracking-wide
+            absolute left-1/2 -translate-x-1/2
+            select-none
+            hover:opacity-100 transition-opacity
+          "
         >
           Fisiovale
         </Link>
@@ -44,36 +51,45 @@ export default function Header() {
           {/* Botão no desktop */}
           <Link
             to="/Agendamento"
-            className="hidden md:block bg-white text-[#94A68C] px-6 py-2 rounded-full hover:bg-[#F5F5F5] transition-colors shadow-lg"
+            className="
+              hidden md:block 
+              bg-white text-[#94A68C] 
+              px-6 py-2 rounded-full 
+              shadow-[0_4px_15px_rgba(0,0,0,0.1)]
+              transition-all
+              hover:bg-[#f3f3f3] hover:shadow-[0_6px_20px_rgba(0,0,0,0.12)]
+            "
           >
             Agende agora
           </Link>
 
         </div>
       </header>
-      
+
       {/* OVERLAY */}
       {
         open && (
           <div
-            className="fixed inset-0 top-[50px] bg-black/20 backdrop-blur-sm z-10 md:hidden"
+            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-10 md:hidden"
             onClick={() => setOpen(false)}
           />
         )
       }
 
-      { /* SIDEBAR MOBILE */}
+      {/* SIDEBAR MOBILE */}
       <div
         className={`
-          fixed top-[50px] left-0 h-full w-[60%]
-          bg-[#94a68c] text-white z-20
-          flex flex-col gap-6 p-6
+          fixed top-0 left-0
+          h-full w-[65%]
+          bg-[#94a68c] text-white 
+          z-20
+          flex flex-col gap-8 p-8
           transform transition-transform duration-300
           ${open ? "translate-x-0" : "-translate-x-full"}
           md:hidden
         `}
       >
-        {/* Botão de fechar */}
+
         <button onClick={() => setOpen(false)} className="self-end">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -87,13 +103,21 @@ export default function Header() {
           </svg>
         </button>
 
-        {/* Links do menu Mobile corrigidos também */}
-        <Link to="/#servicos" className="text-lg" onClick={() => setOpen(false)}>Serviços</Link>
-        <Link to="/#team" className="text-lg" onClick={() => setOpen(false)}>Quem somos</Link>
-        <Link to="/#contato" className="text-lg" onClick={() => setOpen(false)}>Contato</Link>
+        <Link to="/#servicos" className="text-lg" onClick={() => setOpen(false)}>
+          Serviços
+        </Link>
+        <Link to="/#team" className="text-lg" onClick={() => setOpen(false)}>
+          Quem somos
+        </Link>
+        <Link to="/#contato" className="text-lg" onClick={() => setOpen(false)}>
+          Contato
+        </Link>
 
-        {/* Botão “Agende agora” */}
-        <Link to="/Agendamento" className="bg-white text-[#94A68C] px-6 py-2 rounded-full shadow-md" onClick={() => setOpen(false)}>
+        <Link
+          to="/Agendamento"
+          className="bg-white text-[#94A68C] px-6 py-2 rounded-full shadow-md"
+          onClick={() => setOpen(false)}
+        >
           Agende agora
         </Link>
       </div>

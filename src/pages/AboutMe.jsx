@@ -1,14 +1,8 @@
-  import Header from '../components/Header'
-  import Footer from '../components/Footer'
-
   export default function AboutMe() {
     return (
       <div className="bg-[#F5F5F5] min-h-screen flex flex-col">
 
-        {/* HEADER FIXO */}
-        <Header />
-
-        {/* CONTEÚDO PRINCIPAL */}
+            {/* CONTEÚDO PRINCIPAL */}
         <section className="relative flex-1 pt-32 pb-24 px-4 sm:px-6 md:px-12">
           
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center relative">
@@ -68,9 +62,6 @@
             </div>
           </div>
         </section>
-
-        {/* FOOTER */}
-        <Footer />
       </div>
     )
   }
