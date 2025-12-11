@@ -8,15 +8,18 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-20 bg-[#94a68c] flex items-center 
-    justify-between px-[2vw] py-4 font-sans">
-
+      <header className="fixed top-0 left-0 w-full z-20 bg-[#94a68c] flex items-center justify-between px-[2vw] py-4 font-sans">
 
         {/* NAVBAR - ESQUERDA (DESKTOP) */}
         <nav className="hidden md:flex gap-[2vw] text-white font-medium">
-          <a href="#servicos" className="hover:text-white transition-colors">Serviços</a>
-          <a href="#team" className="hover:text-white transition-colors">Quem somos</a>
-          <a href="#contato" className="hover:text-white transition-colors">Contato</a>
+          {/* Combinamos a rota '/' com o hash '#servicos' */}
+          <Link to="/#servicos" className="hover:text-white transition-colors">Serviços</Link>
+          
+          {/* Se 'Team' for uma seção na home: */}
+          <Link to="/#team" className="hover:text-white transition-colors">Quem somos</Link>
+          
+          {/* Se 'Contato' for uma seção na home: */}
+          <Link to="/#contato" className="hover:text-white transition-colors">Contato</Link>
         </nav>
 
         {/* TÍTULO — SEMPRE CENTRALIZADO */}
@@ -46,10 +49,10 @@ export default function Header() {
             Agende agora
           </Link>
 
-
         </div>
       </header>
-      {/* OVERLAY – aparece quando o menu está aberto */}
+      
+      {/* OVERLAY */}
       {
         open && (
           <div
@@ -62,13 +65,13 @@ export default function Header() {
       { /* SIDEBAR MOBILE */}
       <div
         className={`
-    fixed top-[50px] left-0 h-full w-[60%]
-    bg-[#94a68c] text-white z-20
-    flex flex-col gap-6 p-6
-    transform transition-transform duration-300
-    ${open ? "translate-x-0" : "-translate-x-full"}
-    md:hidden
-  `}
+          fixed top-[50px] left-0 h-full w-[60%]
+          bg-[#94a68c] text-white z-20
+          flex flex-col gap-6 p-6
+          transform transition-transform duration-300
+          ${open ? "translate-x-0" : "-translate-x-full"}
+          md:hidden
+        `}
       >
         {/* Botão de fechar */}
         <button onClick={() => setOpen(false)} className="self-end">
@@ -84,13 +87,13 @@ export default function Header() {
           </svg>
         </button>
 
-        {/* Links do menu */}
-        <a href="#" className="text-lg">Serviços</a>
-        <a href="/Team" className="text-lg">Quem somos</a>
-        <a href="#" className="text-lg">Contato</a>
+        {/* Links do menu Mobile corrigidos também */}
+        <Link to="/#servicos" className="text-lg" onClick={() => setOpen(false)}>Serviços</Link>
+        <Link to="/#team" className="text-lg" onClick={() => setOpen(false)}>Quem somos</Link>
+        <Link to="/#contato" className="text-lg" onClick={() => setOpen(false)}>Contato</Link>
 
         {/* Botão “Agende agora” */}
-        <Link to="/Agendamento" className="bg-white text-[#94A68C] px-6 py-2 rounded-full shadow-md">
+        <Link to="/Agendamento" className="bg-white text-[#94A68C] px-6 py-2 rounded-full shadow-md" onClick={() => setOpen(false)}>
           Agende agora
         </Link>
       </div>

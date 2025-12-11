@@ -7,9 +7,8 @@ export default function Agendar() {
         <>
             {/* HEADER FIXO — sempre fora da section */}
             <Header />
-
+            
             <section className="min-h-screen bg-[#f5f5f5] pt-[120px] pb-32 px-6 md:px-20">
-
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-20 items-start">
 
                     {/* COLUNA DA ESQUERDA — TEXTO */}
@@ -58,15 +57,7 @@ export default function Agendar() {
 
                     </div>
                 </div>
-
-                {/* IMAGEM PRINCIPAL */}
-                {/* IMAGEM GRANDONA — MESMA LARGURA DO CARD */}
-
-
-
-
             </section>
-
             {/* FOOTER SEMPRE FORA DA SECTION */}
             <Footer />
         </>
