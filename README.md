@@ -1,16 +1,31 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🌿 Fisiovale — Website Oficial  
+### Site moderno para apresentação institucional, serviços e agendamentos de fisioterapia
 
-Currently, two official plugins are available:
+O **Fisiovale** é um website desenvolvido com foco em experiência premium, fluidez visual.  
+O projeto apresenta informações sobre a clínica, equipe, serviços oferecidos e fornece acesso rápido ao agendamento de consultas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este repositório contém todo o código-fonte da interface, construída em React + TailwindCSS.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Funcionalidades
+- **Home moderna** com Hero premium  
+- **Header responsivo** com menu mobile animado  
+- **Sessão “Nossos Serviços”** em estilo Apple-like com animações suaves  
+- **Página Equipe (Team)** com visual institucional  
+- **Sessão de Contato** com formulário  
+- **Página de Agendamento**  
+- Design totalmente **responsivo e otimizado**  
+- Animações fluidas usando Tailwind transitions  
+- Estrutura de rotas com React Router
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tecnologias Utilizadas
+- **React.js**
+- **Vite**
+- **TailwindCSS**
+- **React Router DOM**
+- **Heroicons**
+- **CSS personalizado**
